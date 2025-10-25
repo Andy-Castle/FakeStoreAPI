@@ -1,5 +1,9 @@
-﻿namespace FakeStoreAPI.Model
+﻿
+namespace FakeStoreAPI.Model
 {
+    /*
+     //* Este es el modelo de los datos de la API externa
+     */
     public class Producto
     {
 

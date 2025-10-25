@@ -1,12 +1,15 @@
 ﻿using FakeStoreAPI.Model;
 using FakeStoreAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
+/*
+ * Controlador para obtener los productos de la FakeStoreAPI
+ */
 namespace FakeStoreAPI.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize] //Esto hace que cualquier cliente que llame a este controlador este autenticado
     [ApiController]
     public class FakeAPIProductosController : ControllerBase
     {

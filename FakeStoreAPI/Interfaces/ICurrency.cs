@@ -1,6 +1,11 @@
 ﻿using FakeStoreAPI.DTO;
 using FakeStoreAPI.Model;
 
+/*
+ * Estas son las interfaces que utilizo para definir
+ * los contratos que otras clases deben de cumplir
+ */
+
 namespace FakeStoreAPI.Interfaces
 {
     public interface ICurrency

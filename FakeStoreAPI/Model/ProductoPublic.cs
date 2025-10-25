@@ -1,5 +1,9 @@
 ﻿namespace FakeStoreAPI.Model
 {
+
+    /*
+     * Este es el modelo para la API con los cambios solicitados
+     */
     public class ProductoPublic
     {
         public int Id { get; set; }

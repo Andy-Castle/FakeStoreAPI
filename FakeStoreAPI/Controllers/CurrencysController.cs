@@ -2,12 +2,14 @@
 using FakeStoreAPI.Interfaces;
 using FakeStoreAPI.Model;
 using FakeStoreAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FakeStoreAPI.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class CurrencysController : ControllerBase
     {

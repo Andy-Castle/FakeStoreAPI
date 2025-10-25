@@ -1,5 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+/*
+ * Data Transfer Object, para que
+ * no expongamos la estructura de los datos
+ */
 namespace FakeStoreAPI.DTO
 {
     public class CurrencyDTO

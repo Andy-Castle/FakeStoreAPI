@@ -4,26 +4,29 @@ using FakeStoreAPI.Controllers;
 using FakeStoreAPI.Interfaces;
 using FakeStoreAPI.Model;
 
+/*
+ * En esta parte tenemos los servicios que contiene la logica del negocio
+ */
 namespace FakeStoreAPI.Services
 {
     public class ProductosServices : IProductos
     {
 
-        private static readonly HttpClient httpClient;
+        private readonly HttpClient _httpClient;
 
         private readonly ICurrency _currency;
 
-        static ProductosServices()
-        {
-            httpClient = new HttpClient()
-            {
-                BaseAddress =  new Uri("https://fakestoreapi.com/products")
-            };
-        }
+        private readonly IConfiguration _configuration;
 
-        public ProductosServices(ICurrency currency)
+        public ProductosServices(ICurrency currency, IConfiguration configuration)
         {
             _currency = currency;
+            _configuration = configuration;
+
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri(_configuration["Url:FakeStoreAPI"]!)
+            };
         }
 
 
@@ -33,7 +36,7 @@ namespace FakeStoreAPI.Services
             {
                 var url = string.Format("products");
                 var resultado = new List<Producto>();
-                var respuesta = await httpClient.GetAsync(url);
+                var respuesta = await _httpClient.GetAsync(url);
 
                 if (respuesta.IsSuccessStatusCode)
                 {

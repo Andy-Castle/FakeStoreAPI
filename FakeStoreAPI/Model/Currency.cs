@@ -1,6 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+/*
+ * Este es el modelo para las monedas
+ */
 namespace FakeStoreAPI.Model
 {
     [Table("Currency")]
