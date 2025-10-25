@@ -46,14 +46,14 @@ que agregar algunas
   "equivalente": 18
 }
 
-Ó
+y
 
 {
   "moneda": "MXN",
   "equivalente": 18
 }
 
-Ó
+y
 
 {
   "moneda": "EUR",
